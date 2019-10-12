@@ -1,0 +1,17 @@
+json的格式：'{"属性名":属性值，"属性名":属性值，"属性名":属性值，"属性名":属性值，"属性名":属性值，}'
+例子：'{"name":"manman","age":21,"sex":"男"}'
+
+json的作用前后端 数据传输的桥梁 方式
+
+var x='{"name":"tom","age":19,"sex":"男"}'
+
+收到json转换为对象的方法：
+1.eval
+  eval("("+json字符串+")")
+  var y=eval("("+x+")")
+  兼容性比较好，但安全隐患大，现在已经不用了
+
+2.JSON.prase
+  JSON.prase(json字符串)
+  var z=JSON.parse(x)
+ ie9以上支持，现在都用

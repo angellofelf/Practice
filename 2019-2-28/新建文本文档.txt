@@ -1,0 +1,34 @@
+jq最后12章
+
+$.ajax  及其衍生方法 
+
+
+表单序列化
+1.js方式
+  var formdata=new FormData.append("表单id名")
+
+自动把所有的表单项的name值当做键名，value值当做键值 构成一个对象
+
+  <form id名>
+      所有的表单项，必须有name值
+
+  </form>
+
+
+
+2.jq方式
+（"表单（用选择器选中表单）"）.serialize();
+
+
+ 
+
+
+
+跨域五种方式 讲了jsonp
+1.jsonp  利用src跨域
+   服务端接受请求端的callback函数，并返回一个带有服务端数据的callback函数json字符串，请求端直接利用src引入这个，即可，实现了，本地函数调用它域的数据
+2.document。domin
+3.h5的一个方法window上的
+
+4.
+5.设置服务器端header字段

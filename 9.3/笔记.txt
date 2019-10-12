@@ -1,0 +1,16 @@
+1.position
+  absolute(绝对定位)
+     单纯脱离文档流（相比于float不回错开内容），相对于最近的具有position的祖先元素定位
+  static（静止）
+  relative（相对定位）
+     不会脱离文档流，相对于自身（值为像素）或者父元素（值为百分比）定位
+  fixed（固定定位）
+      单纯脱离文档流，相对于窗口进行定位
+
+2.z-index
+  只对具有position的盒子才会生效
+3.ie滤镜
+  对ie6,7,8生效，是为了实现某些css功能
+  格式 ：  filter：filtername（参数）
+  常用,透明度（alpha） opacity
+  

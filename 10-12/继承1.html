@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function father(){
+            this.money="100000000";
+        }
+        father.prototype.eat=function(){
+            alert("好好吃饭，身体倍棒");
+            alert("继承过来的属性"+this.money);
+        }
+        function child(){
+            father.call(this);
+            this.age=19;
+        }
+        for(var i in father.prototype){
+            child.prototype[i]=father.prototype[i];
+        }
+        var xiaoming=new child();
+        xiaoming.eat();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

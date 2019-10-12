@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	table,td{
+		border:1px solid black;
+		border-collapse: collapse;
+	}
+	td{
+          width: 100px;
+          text-align: center;
+          vertical-align: middle;
+	}
+	td.td1{
+		width:200px;
+		
+	}
+    tr.tr1,td.td1{
+    	background-color: #7AC5CD;
+    }
+    input[type="text"]{
+    	width:90%;
+    	height:90%;
+    	border-top: none;
+    	border-left: none;
+    	border-right: none;
+    	border-bottom: 2px solid blue;
+
+    }
+	</style>
+</head>
+<body>
+	<form  method="post">
+   <table widht="600" height="210">
+   	<tr class="tr1">
+   		<td class="td1">硬盘(Hard Disk)</td>
+   		<td>2004</td>
+   		<td>2005</td>
+   		<td>2006</td>
+   		<td>2007</td>
+   	</tr>
+    <tr>
+    	<td class="td1">主板(Mainboard)</td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+    </tr>
+    <tr>
+    	<td class="td1">内存条(Memory Disk)</td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+    </tr>
+     <tr>
+    	<td class="td1">机箱(Case)</td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+    </tr>
+    <tr>
+    	<td class="td1">电源(Power)</td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+    </tr>
+    <tr>
+    	<td class="td1">CPU风扇(CPU Fan)</td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+    </tr>
+     <tr>
+    	<td class="td1">总计(Total)</td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+   		<td><input type="text" name="texts"></td>
+    </tr>             
+   </table><br>
+   <input type="submit" value="Add Data" id="sent">
+   </form>
+</body>
+<script type="text/javascript">
+	var sent=document.getElementById("sent");
+	var texts=document.getElementsByName("texts");
+	sent.onsubmit=function(){
+        for(i=0;i<texts.length;i++){
+        	tests[i].value="";
+        }
+
+	}
+</script> 
+</html>

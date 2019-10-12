@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+
+		div.css_div div{
+			background:blue;
+			color:#fff;
+			height:200px;
+			width:200px;
+			display: none;
+			
+		}
+		input.active{
+			background-color:red;
+		}
+	</style>
+    <script type="text/javascript">
+    	window.addEventListener("load",function(){
+    		var nav=document.getElementById("nav");
+    		var inputs=nav.getElementsByTagName("input");
+    		var divs=nav.getElementsByTagName("div");
+    		for(i=0;i<inputs.length;i++){
+    			   inputs[i].x=i;
+                  inputs[i].onclick=function(){
+                  	for(j=0;j<inputs.length;j++){
+                  		divs[j].style.display="none";
+                  		inputs[j].className="";
+                  		console.log(this.x);
+                  	}
+                    divs[this.x].style.display="block";
+                  	this.className="active";
+                  }
+    		}
+
+    	})
+    </script>	
+</head>
+<body>
+	<div id="nav" class="css_div">
+		<input type="button" value="内容1">
+		<input type="button" value="内容2">
+		<input type="button" value="内容3">
+		<div style="display: block;">哈哈哈哈1</div>
+		<div >哈哈哈哈2</div>
+		<div >哈哈哈哈3</div>
+	</div>
+</body>
+</html>

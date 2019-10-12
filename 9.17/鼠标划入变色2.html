@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<style>
+	    bady,table,ul,li,h1,h2,h3,h4,h5,h6{
+	    	margin:0px;
+	    	padding: 0px;
+	    }
+		table,td{
+			border:1px solid blue;
+
+		}
+		table{
+			background: red;
+			position: relative;
+			left:50%;
+			margin-left: -250px;
+
+
+		}
+		tr.test{
+			background:yellow;
+		}
+	</style>
+</head>
+<body>
+	<table width="500" cellpadding="0" cellspacing="0">
+		<tr>
+			<td>内容1</td>
+			<td>内容2</td>
+			<td>内容3</td>
+			<td>内容4</td>
+			<td>内容5</td>
+		</tr>
+		<tr>
+			<td>内容1</td>
+			<td>内容2</td>
+			<td>内容3</td>
+			<td>内容4</td>
+			<td>内容5</td>
+		</tr>
+		<tr>
+			<td>内容1</td>
+			<td>内容2</td>
+			<td>内容3</td>
+			<td>内容4</td>
+			<td>内容5</td>
+		</tr>
+		<tr>
+			<td>内容1</td>
+			<td>内容2</td>
+			<td>内容3</td>
+			<td>内容4</td>
+			<td>内容5</td>
+		</tr>
+		<tr>
+			<td>内容1</td>
+			<td>内容2</td>
+			<td>内容3</td>
+			<td>内容4</td>
+			<td>内容5</td>
+		</tr>
+	</table>
+</body>
+<script type="text/javascript">
+	var trs=document.getElementsByTagName("tr");
+	for(i=0;i<trs.length;i++){
+		trs[i].onmouseover=function(){
+			this.className="test";
+		};
+		trs[i].onmouseout=function(){
+			this.className="";
+		};
+	}
+</script>
+</html>

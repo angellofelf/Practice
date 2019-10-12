@@ -1,0 +1,13 @@
+string对象2
+
+search 类似indexof但是可以寻找正则表达式
+
+slice substring 截取字符串（起始位置[，终止位置]）截取字符串从起始位置到终止位置之前（不包含终止位置）
+slice的参数可以为负数，substring不可以
+substr（起始位置，长度） 参数可以为负
+
+split（“分隔符”）按照指定分割符将字符串转换成新数组
+
+join（“分隔符”）按照指定分隔符，将数组转换成字符串
+valueof  返回值 不要其他属性
+string.valueof

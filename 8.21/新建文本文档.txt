@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .father{
+            background-color:aqua;
+            color:black;
+            border: 1px solid blue;
+            padding:10px 5px 10px;
+        }
+     .son1{
+         background-color:peru;
+         border:1px solid black;
+     }
+        .son2{
+            background-color:yellow;
+            border:1px solid black;
+        }
+        .son3{
+            background-color:beige;
+            border:1px solid oldlace;
+        }
+        .uncle{
+            background-color:navy;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div calss="son1">son1</div>//”–Œ Ã‚≈∂
+
+        <div class="son2">son2</div>
+        <div class="son3">son3</div>
+    </div>
+    <div class="uncle">uncle</div>
+</body>
+</html>

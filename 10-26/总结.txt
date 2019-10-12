@@ -1,0 +1,68 @@
+1
+先讲了获得节点的几种方法
+ 以往的三种
+ 还有新的
+ document.getElementsClassName(值)  ie678不支持
+ 678
+ 获得一个数组
+ documentquerySelector(css类选择器名)  获得给类的第一个节点 678不支持
+
+2.
+nodeName  
+元素节点是标签名
+属性节点的是属性的名称， arrtibutes
+文本节点是#text
+文档节点是#document
+nodeValue  
+文档节点，和元素节点是空
+对于文本节点是，是里面的文本
+对于属性节点是属性值
+nodeType
+1 元素节点
+2 属性节点
+3 文本节点
+8 注释节点
+9 文档节点
+ 
+div1.attributes[n]  该节点的第n个属性  是一个数组
+
+dom对象分类，系统创建的，用户自己创建的
+创建节点：
+-----creatElement() 创建一个元素节点/dom对象
+-----creatTextNode() c创建一个文本节点
+
+var 元素几点或者dom对象=document.creatElement("标签名") 
+在内存中创建了一个空的dom对象，为挂载到现实的真是dom上，不显示
+将用户创建的DOM对象，挂载到真实的DOM上，会引发DOM对象的重绘--花费很长的世间，消耗js效能4000:1---总原则是尽量减少DOM刷新次数，提升js性能
+
+添加节点
+appendChild(node)
+两种情况
+1.添加新节点到当前节点内部的后面
+2.移动原有节点到当前节点内部的后面
+
+insertBefore(要添加或移动的节点，参考节点（当前节点内部的节点）)
+1.添加新节点到当前节点内部的前面
+2.移动原有节点到当前节点内部的前面
+insertBefore 不光会影响当前节点（父元素）但是，还会影响父元素里面的元素，就是后面的节点
+
+删除节点
+------.remove() 删除当前节点； 678不支持，兼容写法。  .outHTML="";\
+------.removeChild(node)  删除子节点
+
+复制节点：
+------cloneNode(true)  深拷贝---除了复制节点，并且复制所有子节点和文本节点
+------cloneNode(false) 浅拷贝---只复制一个节点
+
+
+替换节点：
+-------replace(新节点，被替换的节点)
+分两种情况 ， 一种是 原本没有的节点替换， 一种是原本有的节点 互相移动
+
+判断节点a是否含有子节点：
+a.hasChlidNodes()  有位true  没有为false
+
+判断a节点是否包含b节点
+a.contains(b)；
+包含为true
+不包含为false

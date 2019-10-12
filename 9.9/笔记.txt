@@ -1,0 +1,37 @@
+1.对象类型
+   基本数据类型：一个变量存储一个值，变量名代表的是内存空间里存的值，
+   对象类型：变量名代表对象的首地址，对象相等的充要条件是，首地址相等。
+   对象构成：属性和方法
+
+2.函数类型
+  用户自定义函数： function 函数名（）{}
+                   var 函数名=function（）{}  匿名函数
+
+  回调函数：把函数当做参数传递
+            function a (x,y){ return x()+y();}
+            function b(){ return 1;}
+            function c(){  return 2;}
+            alert(a(b,c));   b和c就是回调函数
+  自调函数：(
+               function([参数]){
+
+
+                     语句
+
+
+                     }
+
+                   )（参数）；
+自调函数的作用：把全局变量封装成局部变量，不同自调函数不互相影响，且自动调用；
+
+  构造器函数：批量创建对象的函数：
+              function 构造器名(name，age,sex){
+                            this.name=name;//this前缀是属性
+                            this.age=age;
+                            this.sex=sex;
+                            this.showInFo=function(){
+                                  };//这是方法
+                         }
+              var stud1= 构造器名（三个形参）；
+注：函数中return后面的语句不执行：
+

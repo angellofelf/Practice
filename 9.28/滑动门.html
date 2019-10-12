@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		#nav div{
+			display: none;
+		}
+		input.active{
+           background:blue;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+			var nav=document.getElementById("nav")
+			var inputs=nav.getElementsByTagName("input");
+			var divs=nav.getElementsByTagName("div");
+			for(i=0;i<inputs.length;i++){
+				inputs[i].x=i;
+                inputs[i].onclick=function(){
+                	for(j=0;j<inputs.length;j++){
+                		inputs[j].className="";
+                		divs[j].style.display="none";
+                	}
+                	divs[this.x].style.display="block";
+                	console.log(i);
+                	this.className="active";
+                }
+			}
+
+		}
+	</script>
+</head>
+<body>
+	<div id="nav">
+		<input type="button" value="图片1">
+		<input type="button" value="图片2">
+		<input type="button" value="图片3">
+		<div  style="display:block"><img src="img/1.jpg" alt=""></div>
+		<div ><img src="img/12.jpg" alt=""></div>
+		<div ><img src="img/123.jpg" alt=""></div>
+	</div>
+</body>
+</html>

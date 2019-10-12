@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height: 200px;
+            background: blue;
+            font: italic 32px/1.5em  bold 微软雅黑;
+            color:aqua;
+            padding: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        这是pc页面
+    </div>
+</body>
+<script type="text/javascript">      
+    var wapurl="m.html";
+    
+    if(/AppleWebKit.*Mobile/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))){
+        if(window.location.href.indexOf("?mobile")<0){
+            
+                if(/Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent)){
+                     window.location.href=wapurl; 
+                }else{ 
+                    window.location.href=wapurl;
+                }
+          
+        }
+    }
+    </script>
+</html>

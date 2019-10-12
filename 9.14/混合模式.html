@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function Student(name,age,sex){
+			this.name=name;
+			this.age=age;
+			this.sex=sex;/*工厂模式创造属性值不同*/
+		};
+		Student.prototype.ShowInfo=function(){
+			alert("姓名"+this.name+"\n"+"年龄"+this.age+"\n"+"性别"+this.sex);
+		};/*原型模式实现方法共享*/
+		var stu1=new Student("tom",11,"男");
+		var stu2=new Student("susan",12,"女");
+		alert(stu1.ShowInfo==stu2.ShowInfo);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

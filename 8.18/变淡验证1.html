@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+       
+    </style>
+    <script type="text/javascript">
+       window.onload=function(){
+        var getid=function(id){
+            return document.getElementById(id);
+        }
+         //定义获取dom对象函数
+         //获取dom对象
+         var userName=getid("userName");
+         var userNameTips=getid("userNameTips");
+         var passWord1=getid("passWord1");
+         var passWord1Tips=getid("passWord1Tips");
+         var yzm=getid("yzm");
+         var yzmsr=getid("yzmsr");
+         var yzmTips=getid("yzmTips");
+
+         //验证码创建
+         var str="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+         var yzm1="";
+             for(i=0;i<=3;i++){
+                 var p=Math.ceil(Math.random()*1000)%61;
+                 yzm1=yzm1+str.substring(p,p+1)   ;
+             }
+        yzm.innerText=yzm1;
+
+
+
+         //提交验证
+         form1.onsubmit=function(e){
+              
+          
+             //用户名为空验证或小于六个字符验证
+             if(userName.value==""){
+                 userNameTips.innerText="用户名不能为空";
+                 userName.focus();
+                 e.preventDefault();
+                }else{
+                    if(userName.value.length<6){
+                userNameTips.innerText="用户名不能小于六个字符";
+                userName.focus();
+                e.preventDefault();
+                   }
+                }
+
+            //密码为空验证
+            if(passWord1.value==""){
+                passWord1Tips.innerText="密码不能为空";
+                passWord1.focus();
+                e.preventDefault();
+            }
+             //验证码为空验证
+            if(yzmsr.value==""){
+                yzmTips.innerText="验证码不能为空";
+                yzmsr.focus();
+              e.preventDefault();
+            }
+            //验证码验证
+            if(yzmsr!=yzm1){
+                yzmTips.innerText="验证码错误";
+                yzmsr.focus();
+              e.preventDefault();
+            }
+           
+
+
+         }
+        
+
+       }
+    </script>
+</head>
+<body>
+    <form action="aa.html" method="POST" id="form1">
+      <label for="userName">用户名</label>
+      <input type="text" id="userName"/><span id="userNameTips">*</span><br>
+      <label for="password1">密码</label>
+      <input type="passWord" id="passWord1"><span id="passWord1Tips">*</span><br>
+      <div>验证码</div><div id="yzm"></div><input type="text" id="yzmsr"><span id="yzmTips">*</span><br>
+      <input type="submit" value="登录"">
+
+    </form>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		img{
+             height: 200px;
+		}
+	</style>
+	<script type="text/javascript">
+		window.onload=function(){
+            var but=document.getElementById('but');
+            var im=document.getElementById("im");			
+			if(-[1,]){
+            but.addEventListener("click",function(){
+            	im.src="img/123.jpg";
+            	
+            })
+           
+
+			}else{
+               but.attachEvent("on"+"click",function(){
+               	im.src="img/123.jpg";
+               })
+			}
+		}
+		
+	</script>
+</head>
+<body>
+	<input type="button" value="点我换图片" id="but">
+	<div><img src="img/12.jpg" alt="" id="im"></div>
+</body>
+</html>

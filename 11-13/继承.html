@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function human(name,age,sex){
+             this.name=name;
+             this.age=age;
+             this.sex=sex;
+        }
+        human.prototype.eating=function(){
+            alert("这是人类的方法");
+        }
+        function studnt(name,age,sex,id){
+            human.call(this);
+            this.id=id;
+
+        }
+        for(var key in human.prototype){
+            studnt.prototype[key]=human.prototype[key];
+
+        }
+        studnt.prototype.leanring=function(){
+            alert(这是学生的方法);
+        }
+        var s1=new studnt("tom",19,"男","10023");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

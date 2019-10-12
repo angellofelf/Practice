@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p{
+             background:#900;
+             width:150px;
+             height:150px;
+             font-size: 20px;
+             color:blue;
+             font-style: italic;
+             font-weight: bolder;
+             font-family: 宋体;
+             }
+         p.special{
+            display:"block";
+         }
+    </style>
+</head>
+<body>
+    <p>我爱张金林</p>
+    <p style="display: none"; id="p2";>也爱张金林</p>
+    <input type="button" value="显示下一句" id="bt1">
+</body>
+<script>
+       var bt1=document.getElementById("bt1");
+       var p2=document.getElementById("p2");
+       bt1.onclick=function(){
+        //    p2.style.display="block";
+        if(p2.style.display=="none"){
+            p2.style.display="block";
+        }else if(p2.style.display=="block"){
+            p2.style.display="none";
+        }
+       } 
+</script>
+</html>

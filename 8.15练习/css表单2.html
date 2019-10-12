@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body{
+            margin:0px;
+            padding:0px;
+        }
+       table{
+           width:800px;
+           height:800px;
+       }
+       table,td{
+           border:1px solid blue;
+           border-collapse: collapse;
+       }
+       td{
+           text-align: center;
+        
+       }
+      
+       .huaru{
+           background-color:brown;
+           cursor: pointer;
+       }
+    </style>
+</head>
+<body>
+    <table align="center" cellpadding=0 cellspacing=0 >
+          <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+          </tr>
+          <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+          </tr>
+          <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+          </tr>
+          <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+          </tr>
+          <tr>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+            <td>单元格</td>
+          </tr>
+  
+
+
+    </table>
+</body>
+<script type="text/javascript">
+    var trs=document.getElementsByTagName("tr");
+    for(i=0;i<trs.length;i++){
+        trs[i].onmouseover=function(){
+           this.className="huaru";
+        }
+    }
+    for(i=0;i<trs.length;i++){
+        trs[i].onmouseout=function(){
+           this.className="";
+        }
+    }
+
+</script>
+</html>

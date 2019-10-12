@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>验证码</title>
+    <link rel="stylesheet" href="code.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="main">
+            <div class="icon"><img src="icon.png" alt=""></div>
+        
+            <div class="scrtCode">
+
+                <div class="code">
+                    <p>发现您的网络环境有异常，为保证正常使用，请验证。</p>
+
+                    <div id="setCode">
+                        <span class="eachCode"></span><span class="eachCode"></span><span class="eachCode"></span><span class="eachCode"></span><span class="eachCode"></span>
+                    </div>
+
+                    <span class="change">看不清？<a href="#" id="changeCode">换一张</a></span>
+                    <!-- a中href不设则整个页面会刷新 -->
+
+                    <div class="getCode">
+                        <span>验证码：<input type="text" id="getCode"></span><div id="codeTips"></div>
+                    </div>
+                </div>
+
+                <div class="confirm">
+                    <input type="button" value="确认" id="confirm">
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+        <div class="footer">
+            <span>网上贸易 尽在阿里巴巴: </span>
+            <a href="">阿里巴巴国际站 | </a>
+            <a href="">阿里巴巴中国站 | </a>
+            <a href="">淘宝网 | </a>
+            <a href="">天猫 | </a>
+            <a href="">聚划算 | </a>
+            <a href="">一淘 | </a>
+            <a href="">阿里妈妈 | </a>
+            <a href="">支付宝 | </a>
+            <p>Copyright &copy; 1999-2015 Alibaba.com Corporation and its licensors. All rights reserved.</p>
+        </div>
+    </div>
+
+    <script src="code_method1.js"></script>
+</body>
+</html>

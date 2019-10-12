@@ -1,0 +1,10 @@
+math对象的方法：
+  math.ceil()上取整
+  math.floor（）下取整
+  math.max(x,y) 返回 x和y中的大者
+  math.min（x，y） 返回x和y中的小者
+  math.pow（x，y） 返回x的y次幂
+  math.random（） 随机返回0-1的一个整数
+  math.round（x） 对x四舍五入
+  math.sqrt（）返回 平方根
+  math.pi（）返回 圆周率

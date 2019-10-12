@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body,html,ul,li,h1,h2,h3,h4,h5,h6,p{
+            margin:0px;
+            padding:0px;
+        }
+        div.container{
+            width: 700px;
+            font: 12px/1.5em 微软雅黑;
+            /* margin: 0px auto; */
+            position: relative;
+            left:50%;
+            margin-left:-350px;
+            background: #e9fbff; 
+            
+        }
+        div.banner img{
+             vertical-align: top; 
+             /* display: block;  处理三像素bug */
+             /* border: 1px solid rgb(104, 104, 223); */
+        }
+        div.nav{
+            color:#90bcff;
+            margin: 0px;
+            padding:0px;
+              /* background:  yellow;   */
+           
+        }
+        div.nav ul{
+            width: 700px;
+            list-style-type: none;
+            /* border: 1px solid blue;  */
+            overflow: hidden;
+            
+
+        }
+        div.nav li{
+            text-align: center;
+            float: left;
+            width: 100px;
+            text-align: center;
+            /* border: 1px solid blue;  */      
+        }
+        div.leftbar{
+            float: left;
+            width:150px;
+            background: #d2e7ff;
+            padding:10px 0px;
+            text-align: center;
+        }
+        div.leftbar p{
+            margin: 20px 0px;
+        }
+        div.leftbar p.leftcontent{
+            text-align: left;
+            margin:10px;
+            color:#001671;
+        }
+        div.rightbar{
+            float: left;
+            width: 530px; 
+            padding-left: 20px;
+            padding-top:15px;  
+            /* background-color:blue;  重点*/
+            background:url("img/bg1.jpg") no-repeat bottom right;
+        }
+        div.rightbar p{
+            margin:10px 0px;
+        }
+        /* div.rightbar p.rightcontent{
+
+        } */
+        div.footer{
+            clear: both;
+            text-align: center;
+            background:#90bcff;
+            width:100%;
+        }
+
+    
+    </style>
+</head>
+<body>
+     <div class="container">
+         <div class="banner">
+             <img src="img/banner1.jpg" alt="">
+         </div>
+         <div class="nav">
+                <ul>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">心情日记</a></li>
+                    <li><a href="">Free</a></li>
+                    <li><a href="">一起走到</a></li>
+                    <li><a href="">从明天起</a></li>
+                    <li><a href="">纸飞机</a></li>
+                    <li><a href="">下一站</a></li>
+                </ul>
+            </div>
+         <div class="leftbar">
+             <p>
+                 <img src="img/selfpic1.jpg" alt="">
+                 <br>我的日记本
+             </p>
+                 <p class="leftcontent">
+                        秋天过半的时候，我搭上了一列火车。我不知道它将要去往的方向，那铁路看上去无休无止地延伸着。
+                 </p>
+            <p>
+                <img src="img/selfpic2.jpg" alt="">
+                <br>我的日记本
+            </p>
+                <p class="leftcontent">
+                  无意间发见，白云的上面，长着许许多多的蒲公英。它在我面前迅速的长大，风吹过的时候，纷纷升起，飞向无数的远方。
+                </p>  
+         </div>
+         <div class="rightbar">
+             <p>
+                 <h3>介绍</h3>
+                 <p class="rightcontent">
+                        火车经过一个又一个站台，窗外漫卷的蒲公英向我微笑着。我逐渐记起了自己旅行的目的，一直都在下一站的前方。火车缓缓地驶入站台，汽笛声响的那一瞬间，车厢变得透明，我看见，自己和这长长的列车一起，正在漫天飘舞着的蒲公英中飞行。
+
+                        
+                 </p>
+             </p>
+             <p>
+                 <h3>转播设备</h3>
+                 <p class="rightcontent">我现在是在万泉河附近，我们的转播车就在旁边不远的地方，师傅马上将会把车开过来。我们的转播设备非常的先进，具体怎么先进我也说不清，师傅比我清楚，总之就是特别特别先进。好，现在师傅已经把转播车开过来了。……</p>
+             </p>
+             <p>
+                 <h3>旅程</h3>
+                 <p class="rightcontent">
+                        夕阳 染红蓝天<br>
+                        带走 美好的一天<br>
+                        风 吹过大地<br>
+                        炫美的世界<br>
+                        <br>
+                        霞光 点亮星辰<br>
+                        燃起 辽远的梦幻<br>
+                        流星 划过夜空<br>
+                        忆起 逝夜的歌声<br>
+                        <br>
+                        是谁昨夜背上行囊<br>
+                        唱一首满载风尘的歌<br>
+                        今夜才又想起拥抱的时刻<br>
+                        <br>
+                        独自走的一段旅程<br>
+                        是否还装满苦涩<br>
+                        一路风雨飘摇 那坎坷对谁说<br>
+                        <br>
+                        来吧看这远处亮起的点点星火<br>
+                        伸手触摸那写在匆匆旅程的歌<br>
+                        谁在转过的街口从容挥手<br>
+                        谁用欢笑和拥抱<br>
+                        记住这一刻
+                 </p>
+             </p>
+         </div>
+         <div class="footer">版权所有</div>
+     </div>
+</body>
+</html>

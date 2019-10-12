@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+   <head>
+      <title></title>
+      <meta charset="gb2312">
+      <script type="text/javascript">
+        window.onload=function(){
+          var p1=document.getElementById("p1");
+         function getTime(){
+        var myDate=new Date();
+        var year=myDate.getFullYear();
+        var month=myDate.getMonth();
+        var date=myDate.getDate();
+        var hours=myDate.getHours();
+        var minutes=myDate.getMinutes();
+        var seconds=myDate.getSeconds();
+
+
+       //p1.innerHTML=year+"年"+month+"月"+date+"日"+" "+hours+":"+minutes+":"+seconds;
+
+       // p1.innerHtml=year+"年"+month+"月"+date+"日"+hours+"时"+minutes+"分"+seconds+"秒";
+       p1.innerHTML=year+"年"+month+"月"+date+"日"+hours+"时"+minutes+"分"+seconds+"秒";
+    
+
+
+        }
+ setInterval(getTime,1000);
+         }
+        
+       
+      </script>
+   </head>
+   <body>
+     <p id="p1"></p>
+   </body>
+</html>

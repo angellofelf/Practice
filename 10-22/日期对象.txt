@@ -1,0 +1,48 @@
+Data对象
+1.创建
+  var myDate=new Date();
+  注：获得是当前时间，并且不会再改变
+2.方法
+  getDate()从date对象返回一个月中的某一天（1-31）
+  getD哎呀（） 返回一周中的某一天（0-6）
+  getMonth（） 返回月份（0-11） 比实际小1
+  getFullYear() 返回年份
+  getHours().getMinutes(),getSeconds()
+        
+  重点：getTime()返回 1970年1月1日至今的毫秒数。时间戳
+        parse（）返回1970年1月1人到指定日期的毫秒数，构造器上的静态方法
+        charCodeAt（）是string构造器上的静态方法
+
+        Date.parse("Jul 8,2008")
+        1215446400000    
+        可以用来比较时间  时间戳可以用来避免重复 ，防止缓存（不能重复的东西，比如验证码）
+   setDate()设置 date对象中月的某一天（1-31）
+    setMonth（）设置月份
+    steFullYear（） 设置年份
+    setHours() setMinutes() setSeconds()
+    seTime（时间戳） 根据毫秒来设置时间
+
+
+
+
+    日期应用：
+        十天免登陆
+        需要获得当前时间10天以后的时间
+        思路：创建日期对象。
+              获得当前时间的时间戳
+              计算10天以后的时间戳
+              调用setTime（）根据十天以后的时间来设置当前时间
+
+        活动倒计时：
+              创建日期对象
+              获得当前时间戳
+              计算10天以后的时间戳
+              调用setTime（）根据十天以后的时间来设置当前时间
+              然后减1
+
+
+    toString()  
+    toTimeString()吧Date对象的时间部分转化为字符串
+    toDateString() 日期部分
+    toUTCString（） 根据世界时间格式 吧date对象转换为字符串（cookie会用到这种通用时间格式）
+    toLocalSring() 根据本地实际 吧date对象转换为字符串

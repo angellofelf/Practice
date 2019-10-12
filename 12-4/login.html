@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="chuli.php" name="form1" method="get">
+        <label for="userName">用户名:</label><input type="text" name="userName"><br>
+        <label for="pwd" >密码：</label><input type="password" name="pwd"><br>
+        <label for="city">城市</label><select name="city" id="">
+            <option value="bj">北京</option>
+            <option value="hz">杭州</option>
+        </select>
+        <label for="kemu[]">科目</label>
+        <input type="checkbox" name="kemu[]" value="yw">语文
+        <input type="checkbox" name="kemu[]" value="sx">数学
+        <input type="checkbox" name="kemu[]" value="ls">历史
+        <input type="submit" value="确认" name="submit">
+    </form>
+</body>
+</html>

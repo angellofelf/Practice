@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>图片透明兼容ie</title>
+	<style>
+		#img1{
+			position: absolute;
+			top:0px;
+			right:0px;
+			opacity:0.5;
+			filter: alpha(opacity=50);
+		}
+		#img2{
+			position: absolute;
+			top:0px;	
+			left:0px;
+		}
+	</style>
+</head>
+<body>
+	<img src="1.jpg" alt="慢慢" id="img1">
+	<img src="1.jpg" alt="manman" id="img2">
+</body>
+</html>

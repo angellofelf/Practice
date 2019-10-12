@@ -1,0 +1,18 @@
+对象分类
+1.内置对象
+2.dom对象
+3.浏览器对象
+4.用户自定义对象
+5.事件对象
+6.ajax对象
+7.JSON对象
+
+
+
+   用户自定义对象--string
+   
+  创建方法： var str="aaaa"   var str= new Array("aaaaa")
+   只有一个属性：length
+   方法很多:charAt()   charCodeAt()  indexOf()   lastIndexOf()  fromCharCodeAt()   concat（）
+ 
+    

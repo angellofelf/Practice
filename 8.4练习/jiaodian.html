@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+      function test(flag)
+        {
+          if(flag==1)
+            { 
+              var sp1=document.getElementById("sp1");
+              sp1.innerHTML="你找到重点了！";
+
+            }
+          else
+            {
+
+              var sp1=document.getElementById("sp1");
+              sp1.innerHTML="你跑偏咯";
+              
+
+            }
+
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <input type="text" id="1" onfocus="test(1);" onblur="test(2);" value="我在这里啊"/><span id="sp1"></span>
+</body>
+</html>

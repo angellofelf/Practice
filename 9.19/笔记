@@ -1,0 +1,45 @@
+1
+charAt(N)  返回字符串的第几个元素 字符串相当于数组
+
+charCodeAt(n)返回字符串的第n哥元素的Unicode编码
+
+fromCharCode()从字符编码创建一个字符串
+这是构造器的函数 而不是 对象的函数
+String.fromCharCode(Unicode编码)
+
+indexOf()在字符串中检索是否有子字符串，有的话返回第一次遇到的位置，没有返回-1
+
+lastIndexOf()从右边（末尾）开始在字符串中检索是否有子字符串，有的话返回第一次遇到的位置（正数位置），没有返回-1
+
+concat()链接字符串和 +号功能不同，例如 "34"+5+6  结果为"3456"  "32"+(5+6)才为"3211"
+而 "abc"+[2,3,4,5]为（abc2,3,4,5）
+当时用concat时 34.concat(5+6)为"3411" 加数组都是一样的
+
+locaeCompare（）判断字符串是否相等
+字符串1.locaeCompare("字符串2") 相等 返回0  不相等返回 -1
+
+正则表达式 var 对象=/规则/修饰符（g、i）
+
+match（子字符串）搜索子字符串，返回第一个匹配的位置，将子字符串返回到一个新数组中
+match（/正则表达式/匹配规则）  就可以返回一串字符
+var str="abcdefg"
+undefined
+str.match("c")
+["c"]
+str.match(/[b-d]/g)
+["b", "c", "d"]
+
+
+
+repalce（"被替换的字符串"，"替换后的字符串"）
+若不用正则，则只替换第一个，用了正则，可以替换全文
+var str="精灵爱慢慢，慢慢爱精灵"
+str.replace("慢慢","manman")
+"精灵爱manman，慢慢爱精灵"
+str.replace(/慢慢/g,"manman")
+"精灵爱manman，manman爱精灵"
+
+数据加密：
+常用加密算法：只能通过原文得出密文
+MD5
+

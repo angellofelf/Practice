@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+</head>
+<body>
+    <div id="father">
+        <p id="p1">haha</p>
+        <input type="button" name="" id="bt1" value="删除">
+    </div>
+</body>
+<script>
+    var p1=document.getElementById("p1");
+    var father=document.getElementById("father");
+    var bt1=document.getElementById("bt1");
+    bt1.onclick=function(){
+    //    this.parentNode.remove();
+    //   father.remove();
+    // this.parentNode.outHTML="";  兼容写法，ie6789
+       this.parentElement.remove();
+        bt1.remove();
+    }
+
+</script>
+</html>

@@ -1,0 +1,4 @@
+css样式书写顺序：
+显示属性：display,list-style,position,float,clear
+自身属性：width,height,margin,padding,border,background
+文本属性：color，font，text-decoration,text-align,vertical-align,content

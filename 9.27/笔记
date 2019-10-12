@@ -1,0 +1,10 @@
+事件绑定的第三种方式：事件监听器
+ie9+ 对象.addEventListener("事件","事件处理函数"[,冒泡false/捕获true])
+IE 6/7/8 对象.attachEvent("on"+事件名,处理函数)
+
+
+兼容性解决：if(-[1,]){
+	ie9以上
+}else（
+  ie678
+）

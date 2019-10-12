@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function human(name,sex,age){
+            this.name=name;
+            this.age=age;
+            this.sex=sex;
+        }
+        human.prototype.seleep=function(){
+            alert("好好睡觉，身体好好");
+        }
+        human.prototype.eating=function(){
+            alert("好好吃饭，身体好好");
+        }
+        function student(name,sex,age,school,major){
+            human.call(this,name,sex,age);
+            this.school=school;
+            this.major=major;
+
+        }
+        for(var i in human.prototype){
+            student.prototype[i]=human.prototype[i];
+            // console.log("human.prototype");
+        }
+        student.prototype.sdtuy=function(){
+            alert("好好学习，学习好好");
+        }
+        var xiaoming=new student("小明","男",19,"ysu","通信工程");
+        console.log(xiaoming.name);
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

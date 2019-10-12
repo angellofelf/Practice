@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除内部浮动</title>
+	<style>
+		div.father{
+			background:blue;
+			color:#fff;
+			padding:0px;
+			border: 3px solid  red;
+			overflow: hidden;/*高版本浏览器激活bfc清除内部浮动*/
+			/**zoom:1;低版本浏览器激活haslayout清除内部浮动*/
+		}
+        div.son1{
+        	background:red;
+        	padding: 10px;
+        	float:left;
+        }
+        div.son2{
+        	background:#fff;
+        	color:black;
+        	float:left;
+        }
+        div.son3{
+        	background:green;
+        	float:left;
+        }
+        div.uncle{
+        	background:black;
+            color:#fff;
+
+        }
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son1">son1</div>
+		<div class="son2">son2</div>
+		<div class="son3">son3</div>
+	</div>
+	<div class="uncle">uncle</div>
+</body>
+</html>

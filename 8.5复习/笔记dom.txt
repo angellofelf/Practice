@@ -1,0 +1,103 @@
+﻿1.对象的组成:
+   
+属性--变量--成员变量
+    方法--函数--成员函数
+
+
+2.对象有类别
+   Math
+   Date
+   String
+
+不同对象都有自己固定不变的属性和方法
+
+
+3.页面的加载流程分为两个阶段:
+     第一阶段:从上到下依次创建每个标记对应的DOM对象，遇到js执行js
+
+     
+第二阶段:从上到下依次渲染（显示）每个标记（DOM对象）
+
+
+4.HTML标记在js中就是DOM对象
+  DOM对象在HTML中就是标记
+
+
+
+                 JavaScript--->DOM对象--->html标记
+                 
+html标记-->DOM对象--->javascript
+
+
+
+5.DOM对象的根对象--document对象
+     
+document代表从
+  <!doctype html>
+    ......
+  </html>
+所有标记
+
+
+document.get...
+从整篇html文档中获取（搜索）指定DOM对象也就是要操作的对象
+
+
+6.如果获取指定DOM对象？
+      
+-- 通过ID名获得指定DOM对象
+ document.getElementById("id名");
+      
+
+-- 通过标签名获取由指定标签组成的数组（切记获得的是数组，数组元素才是DOM对象）
+ document.getElementsByTagName("标签名");
+
+
+ 
+      --通过标签的name属性，获取指定标记组成的数组（切记获得的是数组，数组元素才是DOM对象）
+
+ document.getElementsByName("name值")；
+
+
+ 7.DOM的属性:
+ 
+   (1)标记的属性就是DOM对象的属性
+   
+         标记属性怎么用，DOM对象的属性就怎么用
+
+<a id="a1" href="http://www.baidu.com" title="你好吗" target="_blank">
+	
+	<u>百度</u>
+	</a>
+
+	a1.href="http://www.taobao.com";
+
+	
+(2)DOM对象其他属性
+	
+  .innerHTML代表DOM对象对应的标记中所有的子标记及内容
+
+	
+  .className 代表DOM对象对应的标记应用的CSS类选器(.className而不是.class属性呢？因为class是ES6关键字，换个写法.class换成.className)
+
+
+
+
+
+
+-----------------------------------
+预习:事件驱动 明天上午
+    周二上午 表单验证，css第一次课
+-----------------------------------
+学习安排:
+css三周，主要思路，要预习CSS和复习CSS，保证CSS学习质量及项目
+
+其他一定要复习js初级预习js中级
+-----------------------------------
+
+
+
+
+
+
+

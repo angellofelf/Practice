@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #yzm{
+            width: 50px;
+            padding: 20px;
+            border: 1px solid red;
+            margin-bottom: 5px;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="yzm"></div> <input type="button" value="看不清换一张" id="btn">
+</body>
+<script>
+        var yzm=document.getElementById("yzm");
+        
+        var btn=document.getElementById("btn");
+        // 先设计这个随机验证码的函数
+        function test(){
+            var str="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            var i;
+            var code="";
+            for(i=0;i<4;i++){
+                var p=Math.ceil(Math.random()*1000%61);
+                code=code+str.substr(p,1);
+            }
+           yzm.innerHTML=code;
+        }
+        test();
+        btn.onclick=function(){
+            test();
+        }
+
+    </script>
+</html>

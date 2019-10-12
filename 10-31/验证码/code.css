@@ -1,0 +1,68 @@
+body,ul,p,h1,h2,h3,h4,h5,h6,span{
+    margin: 0;
+    padding: 0
+}
+body{
+    font: 16px/1.5em 微软雅黑
+}
+.container{
+    width: 1000px;
+    margin: 0 auto;
+}
+.main{
+    margin: 40px 0 0 150px;
+}
+.icon{
+    float: left
+}
+.scrtCode{
+    float: left;
+    margin: 30px 0 0 20px; 
+}
+.code{
+    border: 1px solid #900;
+    width: 400px;
+    height: 150px;
+    padding: 10px;
+    text-align: center;
+}
+.code a, .footer a{
+    color: blue;
+    text-decoration: none;
+}
+.code>p{
+    margin-bottom: 30px
+}
+#setCode{
+    float: left;
+    padding-left: 80px;
+    font-size: 22px;
+    color: blue
+}
+.eachCode{
+    display: block;
+    float: left;
+    padding: 0 2px
+}
+#getCode{
+    margin-top: 30px;
+    width: 80px
+} 
+.getCode{
+    margin-left: -70px
+}
+.confirm{
+    margin: 10px 0; 
+    text-align: center
+}
+.footer{
+    padding-top: 40px;
+    clear: both;
+    font-size: 14px;
+    text-align: center
+}
+#codeTips{
+    margin-right: -30px;
+    font-size: 12px;
+    color: red
+}

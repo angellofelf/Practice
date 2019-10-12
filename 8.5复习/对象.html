@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>对象t</title>
+    <script type="text/javascript">
+       console.log(window.innerWidth);//浏览器对象，属性
+       //浏览器对象方法
+       window.alert("勿忘初心");     //窗口弹出提示信息，带确定按钮
+       window.confirm("你喜欢我嘛？");   //窗口弹出一个带确定和取消的对话框，确定返回TRUE，取消返回FLASe
+       window.prompt("请输入你爱的人","");    //窗口弹出一个带提示的文本输入框，为字符串类型
+       window.open("https://www.baidu.com","百度首页");  //打开一个页面
+       location.href="https://www.163.com";   //动态打开一个网页
+
+
+       //内置对象
+       var str=new string("hahaaha"); //字符串对象定义的方法 简写为 var str="hahaaha";
+       var i=str.length;   //字符串对象只有一个属性 就是length  字符串就是一个一个字符的数组形式储存的
+       //字符串的方法，截取字符串
+       str.substing("","");
+       str.substr("","");
+
+
+       //math对象
+       math.pi;
+       math.sin(23);
+       math.random();//随机产生一个小数
+       math.ceil();//取整数
+     
+
+       //日期对象
+       myDate=new Date();   //创建日期对象
+       myDate.getFullYear();
+       myDate.getMonth()+1;
+       myDate.getDate();
+       myDate.gethours();
+       myDate.getMinutes();
+       myDate.getSeconds();
+       myDate.toLocalString();
+
+
+
+       //创建用户自定义对象
+       var object={
+            属性1:"xxx",
+            属性2:"xxx",
+            属性3:xxxx,
+
+            行为名:function(){}
+
+
+
+       }
+
+
+
+
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

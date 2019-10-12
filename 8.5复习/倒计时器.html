@@ -1,0 +1,32 @@
+﻿<!doctype html>
+<html>
+  <head>
+     <title></title>
+     <meta charset="gb2312">
+     <script  type=text/javascript>
+
+         var x=100;
+         window.onload=function(){
+         var p1=document.getElementById("p1");
+        
+         function showTime(){
+                        p1.innerHTML=x;
+                        x--;
+               
+
+                               }
+     
+        setInterval(showTime,1000);
+        if(x==0)
+        clearInterval(showTime);
+                     }
+     </script>
+  </head>
+
+  <body>
+   <p id="p1" ></p>
+
+  </body>
+
+</html>
+

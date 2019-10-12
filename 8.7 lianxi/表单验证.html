@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    用户名<input type="text" value="" id="userName" /><span id="userNameTips" value="#" onblur="checkUser(this);" onfocus="clearTips();"></span>
+
+</body>
+<script type="text/javascript">
+var userName=document.getElementById("userName")
+//验证应户名是否为空
+if(userName==""){
+    var userNameTips=document.getElementById("userNameTips");
+    uesrNameTips.innerHTML="用户名不能为空";
+}
+
+
+//验证用户名是否合法
+//function checkUser(){
+    var x=userName.value.length;
+    if(x<6 || uesrName.value.length>16){
+    var userNameTips=document.getElementById("userNameTips");
+    userNameTips.innerHTML="用户名长度不能小于6位或者大于16位";
+//}
+}
+function clearTips(){
+    var userNameTips=document.getElementById("userNameTips");
+    userNameTips.innerHTML="*";
+}
+
+
+</script>
+</html>

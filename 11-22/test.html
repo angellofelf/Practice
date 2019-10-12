@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            background: blueviolet;
+            color: #fff;
+            padding: 5px;
+            width: 300px;
+            /* margin: 0px auto; */
+            position: relative;
+            left: 50%;
+            margin-left: -150px;
+           margin-top: -8px;
+        }
+        p{
+            background: red;
+
+        }
+    </style>
+</head>
+<body>
+    <div id="father">
+        <p id="p1">p1</p>
+        <p id="p2">p2</p>
+        <p id="p3">p3</p>
+        <p id="p4">p4</p>
+    </div>
+</body>
+<script type="text/javascript">
+    var $getdom=function(id){
+        return document.getElementById(id);
+
+    }
+    var p1=$getdom("p1");
+    var p2=$getdom("p2");
+    var p3=$getdom("p3");
+    var p4=$getdom("p4");
+    var div1=$getdom("father");
+    
+</script>
+</html>
+<!--
+var p5=p1.cloneNode(true)
+undefined
+p5
+<p id=​"p1">​p1​</p>​
+var p6=p1.cloneNode(false)
+undefined
+p6
+<p id=​"p1">​</p>​
+
+div1.replaceChild(p6,p1)
+<p id=​"p1">​p1​</p>​
+div1.hasChildNodes()
+true
+div1.contains(p2)
+true 
+-->

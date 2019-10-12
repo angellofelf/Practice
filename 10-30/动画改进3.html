@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        		#div1{
+			background: #090;
+			color:#fff;
+			width: 100px;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			border-radius: 50px 0px;
+			cursor:pointer;
+			position: relative;
+		}
+    </style>
+</head>
+<body>
+    <div id="div1">仙女啦啦啦</div><br>
+    <!-- <input type="button" value="暂停" id="bt1"> -->
+    <input type="button" value="动画" id="bt2">
+    
+</body>
+    <script>
+        var div1=document.getElementById("div1");
+        var bt1=document.getElementById("bt1");
+        var bt2=document.getElementById("bt2")
+        var i=0;
+        var z;
+        // bt2.onclick=function(){
+        //    z=setInterval(function(){ div1.style.left=div1.offsetLeft+i+"px";},30)
+        // //    setTimeout()方法是在等待指定时间后执行函数, 且只执行一次传入的句柄函数. setInterval()方法是每指定间隔时间后执行一次传入的句柄函数,循环执行直至关闭窗口或clearInterval().
+           
+        // }
+        // bt1.onclick=function(){
+        //     clearInterval(z);
+        // }  
+        // bug:连点两次动画就无法暂停,所以绑定在一个按钮上，用条件判断来控制
+        bt2.onclick=function(){
+            if(i%2==0){
+               z=setInterval(
+                   function(){ div1.style.left=div1.offsetLeft+i+"px";  /*因为i会变化，所以越滑越快*/
+                   if(div1.offsetLeft>=1920){
+                    div1.style.left=0+"px";
+                  }   // 我的浏览器窗口宽度是1920，到了之后回去
+               }
+               ,30)
+               
+            }else{
+                clearInterval(z);
+            }
+            i++
+        }
+        
+        console.log(window.innerWidth)
+        
+    </script>
+</html>

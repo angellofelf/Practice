@@ -1,0 +1,17 @@
+window对象
+scorllBy()  浏览器窗口滚动多少
+scorllTo()  l浏览器窗口滚动到
+confirm（“提示信息”）  确定返回true 取消返回fasle
+setTimeOut（）
+cleatTimeOut（）
+setInterver（）
+clearInterver（）
+
+属性：
+innerHeight
+innerWidth        视窗宽高
+
+naigator对象
+cookieEnable（）
+platform（）
+userAgent（）；

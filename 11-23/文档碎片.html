@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            background: blue;
+            color: #fff;
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+           aaaa          
+    </div>
+    <input type="button" value="添加10个p" id="bt1">
+</body>
+<script>
+    var div1=document.getElementById("div1");
+    
+    bt1.onclick=function(){
+        var frag=document.createDocumentFragment();
+        var p;
+        for(var i=1;i<=10;i++){
+            p=document.createElement("p");
+            p.innerHTML="p"+i;
+            frag.appendChild(p);
+        }
+        div1.appendChild(frag);
+    }
+</script>
+</html>

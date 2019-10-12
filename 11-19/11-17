@@ -1,0 +1,106 @@
+上午：
+第九章：bom对象
+浏览器对象： 
+根对象：window 
+           子对象：document
+                  frame
+                  history
+                  screen
+                  navigator
+                  location
+window对象的属性和方法：
+window.innerhight/innerwidth
+ie678 兼容 document.documentElement.clientHeight
+属性：length 返回页面中的框架数
+print() 打印
+close() 关闭
+scrollBy(x,y) 滚动条滚动多少像素
+scrollTo(x,y) 滚动条滚动到多少像素
+setTimeout(function(){},毫秒数)  超时器，多少毫秒后调用function 异步执行
+clearTimeout(id值)
+setInterval(function(){},毫秒数) 计时器，每隔多少毫秒调用一次function
+clearInterval(id值)
+
+navigator对象的属性和方法
+navigator.userAgent
+包含浏览器的相关信息，自动发送给远程服务器，在请求头中，是一个字符串，可以通过对字符串进行截取，等处理，用于判断浏览器所在的设备，于是可以跳转到不同的网页（pc段天猫和移动端天猫）
+
+screen对象的属性和方法
+height：屏幕高度
+width：屏幕宽度
+availHeight：除任务栏以外的高度
+availWidth：除任务栏外的宽度
+
+Hisyory对象的属性和方法
+length:返回浏览器   历史列表中的URL数量
+go(n) ：加载history列表中的某个url连接
+forward（）：加载history列表中的下一个连接
+back（）：加载history列表中的上一个连接
+
+location对象的属性和方法
+--hash  锚 书签链接 
+--host  返回端口号
+--href  设置返回完整的URL
+--protocol  设置或返回当前url的协议
+--search  设置或返回从问号?开始的url（查询部分）
+--assign(url)加载新的文档
+--reload(url)重新加载当前文档（无参方法）
+--replace(url)用新的文档替换当前文档
+
+frame对象的属性和方法
+对象包含所有框架
+
+document对象
+代表当前文档 从<!doctype html>
+              </html>
+
+下午：
+第十章：dom对象
+浏览器架构：用户界面--
+           浏览器引擎---数据存储部分
+              |
+              |
+              |
+           浏览器内核
+     |         |        |
+     网络    js解释器   ui后端
+dom树
+文档---文档节点
+标签---元素节点
+文本---文本节点
+属性---属性节点
+注释---注释节点
+一丶获取dom对象
+document对象获得文档元素
+var dom对象=document.getElementById(id);
+var 数组名=document.getElementByName(name值)
+var 数组名=document.getElementByTagName(标记名)
+var 数组名=document.getElementByClassName(class名) ie9+
+var dom对象=document.querySelector（基本选择器）ie8+
+返回第一个元素
+var 数组名=documt.querySelectorAll（基本选择器）;ie8+
+
+二丶创建dom对象
+1.创建的都是空的元素节点
+  var dom对象=document.createElement("标记");
+  //说明。新创建的dom对象是一个js对象，存储在内存中，用户看不到
+  只有添加到文档中原有的标记中，才能被看到，但是会引发重绘（dom刷新--非常耗费性能）
+性能比: 4000:1
+我们为了提升js性能，尽量减少dom刷新次数
+document.createElement()创建一个元素节点
+document.createTextNode()创建文本节点
+
+        appendChild(node) 
+                       --添加节点到当前节点内部的后面（新创建的节点）
+                       --移动节点到当前节点内部的后面（已有节点）
+
+        insertBefore(要添加或移动的元素节点,参考节点)
+                       --添加节点到当前节点内部的前面（新创建的节点）
+                       --移动节点到当前节点内部的前面（已有节点）
+                           
+
+          
+
+
+
+  

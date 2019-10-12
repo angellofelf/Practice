@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.active{
+			background:yellow;
+		}
+	</style>
+	<script>
+		window.onload=function(){
+	
+		 new test("nav");
+		 console.log(new test("nav"));
+	        function test(id){
+			var _this=this;
+		 	var nav=document.getElementById(id);
+			this.btn=document.getElementById("inputs1");
+		 	this.im=document.getElementById("img1");
+		 	this.btn.onclick=function(){
+				_this.fnClick(this)
+		 	}
+		 }
+		 test.prototype.fnClick=function(btn){
+            btn.className="active";
+             this.im.src="img/123.jpg";
+		 }
+       }
+	</script>
+</head>
+<body>
+	<div id="nav">
+	<input type="button" value="点我换图片" id="inputs1">
+	<img src="img/12.jpg" alt="" name="tupian" id="img1">
+	
+	</div>
+</html>

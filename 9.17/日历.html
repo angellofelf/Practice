@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		table,td{
+			border-collapse:collapse;
+			text-align: left;
+			vertical-align: top;
+			position: relative;
+
+		}
+		div{
+			font: 12px solid  宋体;
+			color:#4F94CD;
+		}
+		td{
+			border:none;
+		}
+        tr{
+        	height:70px;
+        }
+        tr.bigan,tr.ending{
+        	height:35px;
+        	vertical-align: middle;
+
+        }
+        tr.bigan td,tr.ending td{
+        	vertical-align: middle;
+
+        }
+        tr.bigan td{
+        	text-align: center;
+        	color:#333;
+        }
+        td.today{
+        	background-color: #8EE5EE;
+        }
+        td div.schedule{
+        	position: absolute;
+        	top:20px;
+        	left:20px;
+        }
+	</style>
+</head>
+<body>
+	<table width="630" height="490" border="1">
+		<tr class="bigan">
+			<td>日</td>
+			<td>一</td>
+			<td>二</td>
+			<td>三</td>
+			<td>四</td>
+			<td>五</td>
+			<td>六</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>3</td>
+			<td>4</td>
+			<td>5</td>
+			<td>6</td>
+			<td>7</td>
+			<td>8</td>
+		</tr>
+		<tr>
+			<td>9</td>
+			<td>10</td>
+			<td>11</td>
+			<td>12</td>
+			<td>13</td>
+			<td>14</td>
+			<td>15</td>
+		</tr>
+		<tr>
+			<td>16</td>
+			<td class="today">17</td>
+			<td>18</td>
+			<td>19</td>
+			<td>20</td>
+			<td>21</td>
+			<td>22</td>
+		</tr>
+		<tr>
+			<td>23</td>
+			<td>24
+				<div class="schedule">中秋节</div>
+			</td>
+			<td>25</td>
+			<td>26
+				<div class="schedule">购买礼物，约仙女看电影，吃饭</div>
+			</td>
+			<td>27</td>
+			<td>28</td>
+			<td>29</td>
+		</tr>
+		<tr>
+			<td >30</td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+			<td></td>
+
+		</tr>
+		<tr class="ending">
+			<td colspan="7">今天&nbsp;&nbsp;农历&nbsp;&nbsp;八月初八</td>
+
+		</tr>
+	</table>
+</body>
+</html>

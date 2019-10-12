@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name=""  cols="30" rows="10" id="t1"></textarea>
+    <span id="s1"></span>字
+</body>
+<script>
+    var t1=document.getElementById("t1");
+    var s1=document.getElementById("s1");
+    t1.onkeydown=t1.onkeypress=function(){
+        
+        s1.innerHTML=t1.value.length;
+
+    }
+</script>
+</html>

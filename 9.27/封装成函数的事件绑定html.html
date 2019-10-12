@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		div{
+			background:yellow;
+			color:#fff;
+			text-shadow: 2px 2px 1px #333;
+			height: 200px;
+			width: 200px;
+		}
+
+	</style>
+<!-- 	<script type="text/javascript">
+		if(-[1,]){
+			window.addEventListener("load",function(){
+				var div1=document.getElementById("div1");
+				div1.addEventListener("click",function(){
+					alert("ie9以上的click事件");
+			})
+			})
+		}else{
+			window.attachEvent("on"+"load",function(){
+				var div1=document.getElementById("div1");
+				div1.attachEvent("on"+"click",function(){
+					alert("ie9以下的click事件");
+				})
+			})
+		}
+		
+	</script> -->
+	<script type="text/javascript" src="aaa.js"></script>
+	<script type="text/javascript">
+        //绑定onload事件
+		addEvent(window,"load",function(){
+			var div1=document.getElementById("div1");
+			addEvent(div1,"click",function(){
+				alert("n你触发了click时间");
+			})
+		})
+	</script>
+</head>\
+<body>
+	<div id="div1">生日快乐嘻嘻嘻嘻</div>
+</body>
+</html>

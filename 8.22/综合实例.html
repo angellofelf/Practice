@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>个人空间</title>
+    <style>
+        /* css样式初始化 */
+        body,ul,h1,h2,h3,h4,h5,h6,li,ul,ol{
+            margin:0px;
+            padding: 0px;
+        }
+        .container{
+            background-color:#87CEEB;
+            color:#333;
+            width:700px;            
+            height:800px;
+            position: relative;
+            left:50%;
+            margin-left: -350px;
+            font:12px/1.5em 宋体;
+        }
+        .banner{
+                background-color:darkorchid;
+                
+                border:1px solid black;
+        }
+        /* 三像素bug */
+        .banner img{
+            vertical-align:top;
+        }
+        .links{
+            background-color:#87CEFA;
+            height:40px;
+            text-align:center;
+            font:16px bolder;
+        }
+        .links ol{
+            list-style-type: none;
+        }
+        .links a{
+            text-decoration:none;
+        }
+        .links li{
+            float:left;
+            width:100px;
+            text-align: center;
+            
+        }
+        /* .contant{
+            background-color:blue;
+            float:left;
+        } */
+        .flooter{
+            background-color:#ACCEED;
+            clear:left;
+            
+        }
+        .left{
+            float: left;
+            background-color:#d2e7ff;
+            width:150px;
+            text-align: center;
+        }
+        .right{
+            background:url("bg1.jpg") no-repeat right bottom;
+            float:left;
+            width:550px;
+        }
+        p.wenzi{
+            text-align: left;
+            padding:0px 10px;
+            margin:5px 0px 10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="banner">
+          <img src="banner1.jpg" />
+        </div>
+        <div class="links">
+            <ol>
+                    <li><a href="">首页</a></li>
+                    <li><a href="">心情日记</a></li>
+                    <li><a href="">Free</a></li>
+                    <li><a href="">一起走</a></li>
+                    <li><a href="">从明天起</a></li>
+                    <li><a href="">纸飞机</a></li>
+                    <li><a href="">下一站</a></li>
+            </ol>
+        </div>
+        <div class="contant">
+            <div class="left">
+                 <p><img src="selfpic1.jpg" alt=""> </p><br>我的日记本<br>
+                 <p class="wenzi">秋天过半的时候，我搭上了一列火车。我不知道它将要去往的方向，那铁路看上去无休无止地延伸着。</p>
+                 <p><img src="selfpic2.jpg" alt=""></p><br>你的心情<br>
+                 <p class="wenzi">无意间发现，白云的上面长着许许多多的蒲公英。它在我面前迅速的长大，风吹过的时候，纷纷升起，飞向无数的远方。</p>
+            </div>
+            <div class="right">
+             right
+            </div>
+        </div>
+        <div class="flooter">aaaa</div>
+
+    </div>
+</body>
+</html>

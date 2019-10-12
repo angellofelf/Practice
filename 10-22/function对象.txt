@@ -1,0 +1,52 @@
+创建函数的方式：
+1. var test=function(x,y){
+    return x+y;
+
+  }
+2. var test= new Function("x","y","return x+y;")
+3.function test(x,y){
+    return x+y;
+}
+
+1,2中基本不用，Function是构造器
+1,2不参与预编译
+
+function对象的属性：
+------------------arguments属性（子对象）代表正在运行的函数，调用函数时的实参
+      arguments的属性           --length实参个数（以数组形式存储实参，但不是数组）
+                                --callee属性，该属性换回当前被调用的函数；
+                                这里也说明了函数的形参多少无所谓，实参可以与形参不同
+函数名.length。获得形参个数
+arguments.length 获得实参个数
+------------------caller属性,返回一个调用该函数对象的外层函数的引用
+function a(){
+    return a.caller;
+}如果直接调a（）返回null；因为没有外层函数
+function b（）{
+    return a（）；
+}返回b函数
+
+
+
+函数重载 同一个函数名，由于函数的参数个数不同，或类型不同实现不同功能，利用arguments
+   function tset（）{
+       if（arguments.length==0）{
+           功能1;
+       }
+       if(arguments.length==1){
+           功能2;
+       }
+       if(arguments.length==2){
+           功能3
+       }
+       if(arguments.typeof==string){
+            功能4
+       }
+   }
+   利用arguments.callee属性实现匿名函数的递归调用 有名函数，直接自己调自己.
+函数递归：(
+    function(count<5){
+        alert(count);
+        arguments.callee(++count)
+    }
+)(1)

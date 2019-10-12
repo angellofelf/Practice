@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+
+		var a=function(){
+		    var x=100;
+			console.log(x);
+			a=function(){
+				// 这里千万不能写成var a ，会当成新的局部变量 而不是原来的a
+				x=99;
+				console.log("新函数"+x);
+			};
+		};
+		a();
+		a();
+
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

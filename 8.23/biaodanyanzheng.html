@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+     window.onload=function(){
+        var getid=function(id){
+            return document.getElementById(id);
+        }
+        //获取id函数
+        var userName=getid("userName");
+        var userNameTips=getid("userNameTips");
+        var pwd=getid("pwd");
+        var pwdTips=getid("pwdTips");
+        var city=getid("city");
+        var cityTips=getid("cityTips");
+
+        biaodan.onsubmit=function(e){
+        //验证用户名为空的情况;
+        if(userName.value==""){
+            userNameTips.innerText="用户名不能为空";
+            e.preventDefault();
+        } else{
+            userNameTips.innerText="";
+        }
+
+        //验证密码为空的情况
+        if(pwd.value==""){
+            pwdTips.innerText="密码不能为空";
+            e.preventDefault();
+
+        } else{
+            pwdTips.innerText="";
+        }
+        //验证是否选择城市
+        if(city.value==""){
+            cityTips.innerText="未选择城市";
+            e.preventDefault();
+        }else{
+            cityTips.innerText="";
+        }
+        
+
+
+
+    }
+    }  
+    </script>
+</head>
+<body>
+    <form action="aaa.html" method="POST" id="biaodan">
+        <label for="userName">用户名</label>
+        <input type="text" id="userName"><span id="userNameTips"></span><br>
+        <label for="pwd">密码</label>
+        <input type="password" id="pwd"><span id="pwdTips"></span><br>
+        <select name="" id="city">
+            <option value="" selected >请选择城市</option>
+            <option value="cq">重庆</option>
+            <option value="bj">背景</option>
+            <option value="sh">上海</option>
+            <option value="hz">杭州</option>           
+        </select>
+        <span id="cityTips"></span>  <br>
+
+        <input type="submit" value="确定">
+    </form>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="js/addCookie.js"></script>
+        <script type="text/javascript" src="js/removeCookie.js" ></script>
+        <script type="text/javascript" src="js/getCookie.js" ></script>
+        <script type="text/javascript">
+        	window.onload=function(){
+        		if(document.cookie!=""){
+        		var $userName_value,$pwd_value;        		
+        		var userName=document.getElementById("userName");
+        		var pwd=document.getElementById("pwd");
+                getCookie();
+        		
+        	}
+        	}
+        	window.onsubmit=function(){
+        	
+        	var remeber=document.getElementById("remeber");
+            function remeberData(){
+        	var userName=document.getElementById("userName");
+        	var userName_value=userName.value;
+        	addCookie("userName",userName_value,10);
+        	var pwd=document.getElementById("pwd");
+        	var pwd_value=pwd.value;
+        	addCookie("pwd",pwd_value,10);
+        	console.log(1);
+        	}
+            if(remeber.checked){
+            	remeberData();
+            }
+            
+           }
+        </script>
+        <style>
+
+       
+        </style>
+	</head>
+	<body>
+		<form action="chuli.php" method="post">
+		<input type="text" name="userName" id="userName"/>
+		<input type="password" name="pwd" id="pwd" />
+		<input type="checkbox" name="remeber" id="remeber"/>是否保存密码
+		<input type="submit" value="登录" />
+		</form>
+
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#t1").dblclick(function(){
+				$(this).attr("readonly",false);
+			}).blur(function(){
+				$(this).attr("readonly",true);
+			})
+
+		})
+	</script>
+</head>
+<body>
+	<input type="text" name="" id="t1" readonly=true value="该吃饭了">
+</body>
+</html>

@@ -1,0 +1,6 @@
+try{
+¼à¿Ø·¶Î§
+
+}catch£¨ex£©{
+  alert£¨ex£¬message£©
+}

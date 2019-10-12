@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            background: blue;
+            width: 100px;
+            height: 100px;
+            border-radius: 100px;
+            text-align: center;
+            position: relative;
+            left:0px;
+            
+        }
+    </style>
+    <script type="text/javascript" src="Tween.js"></script>
+    <script type="text/javascript">
+    window.onload=function(){
+
+        var b=0,t=0,c=600,d=2000,speed=1;
+        var div1=document.getElementById("div1");
+        function run(){
+         div1.style.left=Math.ceil(Tween.Expo.easeOut(t,b,c,d))+"px";
+        //  if(t<d){
+        //      t=t+speed;
+        //      setTimeout(run,10);
+        //  }
+      }
+      setInterval(run, 10);
+    }
+    </script>
+</head>
+<body>
+    <div id="div1">
+
+        
+
+    </div>
+    
+</body>
+</html>

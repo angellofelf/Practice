@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>onmouseover onmouseout</title>
+    <script type="text/javascript">
+    	function change(flag){
+         var img1=document.getElementById("img1");
+         if(flag==0){
+         	img1.src="images/timg1.jpg";
+         }else{
+         	img1.src="images/timg.jpg";
+         }
+    	}
+    </script>
+</head>
+<body>
+	<img id="img1" src="images/timg.jpg" width="300" onmouseover="change(0);" onmouseout="change(1);"/>
+</body>
+</html>

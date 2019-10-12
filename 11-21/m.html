@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div{
+            width:200px;
+            height: 200px;
+            background: blue;
+            font: italic 32px/1.5em  bold 微软雅黑;
+            color:aqua;
+            padding: 10px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div>
+        这是手机页面
+    </div>
+</body>
+<!-- <script type="text/javascript">  
+
+    var url = window.location.pathname;
+    var pcurl="pc.html";
+    
+    if(/AppleWebKit.*Mobile/i.test(navigator.userAgent)==false || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))==false){
+        if(window.location.href.indexOf("?mobile")<0){
+            try{
+                if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)==false){
+                     window.location.href=pcurl; 
+                }
+    
+            }catch(e){}
+        }
+    }
+    </script> -->
+    <script type="text/javascript">
+       var userAgent = navigator.userAgent.toLocaleLowerCase();
+       if(/AppleWebKit.*Mobile/i.test(userAgent) == false || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(userAgent)) == false){
+           try {
+                if(/Android|webOS|iPhone|iPad|BlackBerry/i.test(navigator.userAgent) == false){
+                        window.location.href="pc.html";
+                }
+           } catch (e) {
+               
+           }
+       }
+    </script>
+</html>

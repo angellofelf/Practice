@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+        var userName=document.getElementById("userName");
+        //验证用户名是否合法
+        function checkuserName(obj){
+            if(obj.value.length<6 || obj.value.length>16){
+            var userNameTips=document.getElementById("userNameTips");
+            userNameTips.innerHTML="用户名小于6个字符或大于16个字符";
+    
+        }
+    }
+        
+        function clearTips(){
+            var userNameTips=document.getElementById("userNameTips");
+            userNameTips.innerHTML="";
+        }
+        
+       
+        
+    
+    </script>
+</head>
+<body>
+    <label for="userName">用户名</label>
+    <input type="text" id="userName" name="userName" onblur="checkuserName(this);" onfocus="clearTips();" /><span id="userNameTips"></span>
+
+</body>
+
+</html>

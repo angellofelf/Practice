@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>欢迎注册</title>
+	<style>
+		span{
+			color:#ff0000;
+		}
+	</style>
+	<script type="text/javascript">
+		var $=function(id){
+				return document.getElementById(id);
+			}
+		window.onload=function(){
+			var form1=$("form1");
+			var userName=$("userName");
+			var userNameTips=$("userNameTips");
+			var password=$("password");
+			var passwordTips=$("passwordTips");
+			var password2=$("password2");
+			var password2Tips=$("password2Tips");
+			var sexs=document.getElementsByName("sex");
+			var sexTips=$("sexTips");
+			var city=$("city");
+			var cityTips=$("cityTips");
+            //提交验证为空或未选报错
+            form1.onsubmit=function(e){
+            	//用户名为空，报错
+            	if(userName.value==""){
+                 userNameTips.innerText="用户名不能为空";
+                 //阻止提交动作
+                 e.preventDefault();
+            	}
+            	//密码为空报错
+            	if(password.value==""){
+                 passwordTips.innerText="密码不能为空";
+                 //阻止提交动作
+                 e.preventDefault();
+            	}
+            	//两个单选按钮都没选报错
+            	if(!(sexs[0].checked || sexs[1].checked)){
+            		sexTips.innerText="请选择性别";
+            		 e.preventDefault();
+            	}
+            	//没有选择城市报错
+            	if(city.options[0].selected){
+            		cityTips.innerText="请选择城市";
+            		e.preventDefault();
+            	}
+
+            }
+
+            //用户名获得焦点，清除错误提示
+            userName.onfocus=function(){
+            	userNameTips.innerText="*";
+            }
+            //密码获得焦点，清除错误提示
+            password.onfocus=function(){
+            	passwordTips.innerText="*";
+            }
+            //用户名少于6个字符报错
+            userName.onchange=function(){
+            	if(this.value.length<6){
+            		userNameTips.innerText="用户名不能少于6个字符";
+            	}
+            }
+            //两次密码不相等报错
+            password2.onblur=function(){
+            	if(password.value!=password2.value){
+            		password2Tips.innerText="两次密码不相等";
+            		password2.value="";
+            		password.value="";
+            		password.focus();//获得焦点方法
+            	}
+            }
+		}
+	</script>
+</head>
+<body>
+	<form id="form1" action="chuli.html" method="post">
+		用户名:
+		<input type="text" id="userName"><span id="userNameTips">*</span><br>
+		密码框:
+        <input type="password" id="password"><span id="passwordTips">*</span><br>
+        确认密码:
+          <input type="password" id="password2"><span id="password2Tips">*</span><br>
+        性别:
+        <input type="radio" name="sex" value="nan">男
+        <input type="radio" name="sex" value="nv">女<span id="sexTips">*</span><br>
+
+        城市:
+        <select name="" id="city">
+        	<option selected>请选择城市</option>
+        	<option value="hz">杭州</option>
+        	<option value="bj">北京</option>
+        	<option value="sh">上海</option>
+
+        </select><span id="cityTips">*</span><br>
+		<input type="submit" value="注册" >
+	</form>
+</body>
+</html>

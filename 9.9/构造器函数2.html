@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		function Animal(name,type,level){
+			this.name=name;
+			this.type=type;
+			this.level=level;
+			this.showInFo=function(){
+				alert("姓名"+this.name+"\n"+"种类"+this.type+"\n"+"级别"+this.level);
+			};
+
+		}
+		var panda=new Animal("熊猫","carnivore","国家一级保护动物");
+		alert(panda.name);
+	    panda.showInFo();
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

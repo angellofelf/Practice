@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script type="text/javascript">
+    window.onload=function(){
+        var getid=function(id){
+            return document.getElementById(id);          
+        }
+        var userName=getid("userName");
+        var sex=document.getElementsByName("sex");
+        
+        form1.onsubmit=function(e){
+            //用户名为空
+            if(userName.value==""){
+               var userNameTips=getid("userNameTips");
+               userNameTips.innerText="用户名不能为空";
+               e.preventDefault();
+            }
+            //未选择性别
+            if(!sex[0].checked || !sex[1].checked){
+                var sexTips=getid("sexTips");
+                sexTips.innerText="未选择性别";
+                e.preventDefault();
+            }
+
+        }
+    }
+    
+    </script>
+</head>
+<body>
+    <form action="aaa.html" method="POST" name="bd" id="form1">
+        <label for="userName">用户名</label>
+        <input type="text" id="userName"/><span id="userNameTips">*</span><br>
+        <input type="password" id="pwd"><span id="pwdTips">*</span><br>
+        <input type="radio" id="sex1" name="sex" value="nan">男
+        <input type="radio" id="sex2" name="sex" value="nv">女
+        <span id="sexTips"></span><br>
+        <select name="city" id="city">
+            <option value=""></option>
+            <option value="bj">北京</option>
+            <option value="nj">南京</option>
+            <option value="tj">天津</option>
+        </select><br>
+
+        <input type="submit" value="确定">
+
+
+
+    </form>
+</body>
+</html>

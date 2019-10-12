@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>清除内部浮动</title>
+	<style>
+		div.father{
+			background:blue;
+			color:#fff;
+			padding:0px;
+			border: 3px solid  red;
+
+		}
+        div.son1{
+        	background:red;
+        	padding: 10px;
+        	float:left;
+        	height:200px;
+        	/*son1浮动 与son2部分重叠*/
+        }
+        div.son2{
+        	background:#fff;
+        	color:black;
+        	/*解决方法，激活son2的bfc，bfc特点不与浮动快重叠，压缩自己（变窄）*/
+			overflow: hidden;/*高版本浏览器激活bfc清除内部浮动*/
+			/**zoom:1;低版本浏览器激活haslayout清除内部浮动*/
+        	height:250px;
+        }
+        div.son3{
+        	background:green;
+       
+        }
+        div.uncle{
+        	background:black;
+            color:#fff;
+
+        }
+	</style>
+</head>
+<body>
+	<div class="father">
+		<div class="son1">son1</div>
+		<div class="son2">son2</div>
+		<div class="son3">son3</div>
+	</div>
+	<div class="uncle">uncle</div>
+</body>
+</html>

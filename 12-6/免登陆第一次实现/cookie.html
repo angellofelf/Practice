@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script>
+			function  setcookie(name,value,days){
+				var myDate=new Date();
+				var ms=myDate.getTime();
+				var endingDay=ms+days*24*3600*1000;
+				myDate.setTime(endingDay);
+				var data=encodeURI(value);
+				document.cookie="name="+data+";expires="+myDate.toGMTString();
+//				document.cookie="userName="+data+";value="+value+";expires="+myDate.toGMTString();
+//				document.cookie="变量=值；expires=gmt格式时间"
+			}
+			setcookie("李三","adadad",7);
+			
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>

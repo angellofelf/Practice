@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        function human(name,sex,age){
+            this.name=name;
+            this.sex=sex;
+            this.age=age;
+        }
+        human.prototype.showInFo-function(){
+            alert("姓名"+this.name+"&nbsp;"+"年龄"+this.age+"&nbsp;"+"性别"+this.sex)
+        }
+        human.prototype.sleep=function(){
+            alert("早睡早起")
+        }
+        function student(name,sex,age,school,grade){
+            human.call(this,name,sex,age);/*father.apply(this,[name,sex,age])*/
+            this.school=school;
+            this.grade=grade;
+        }
+        for(var i in human.prototype){
+            student.prototype[i]=human.prototype[i];
+        } 
+        student.prototype.study=function(){
+            alert("好好学习，天天向上");
+        } 
+        var xiaoming=new student("男","小明",19,"燕山大学","三年级");
+        var xiaohong=new student("小红","女",20,"燕山大学","四年级")
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

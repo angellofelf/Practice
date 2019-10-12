@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>验证码2</title>
+    <style type="text/css">
+        span{
+           display: inline-block;
+           font: 20px/1.5em bolder 宋体;
+           color:blueviolet;
+           background: #fff;
+           /* -webkit-transform: rotate(20deg) scale(1.2) translate(0px,5px) skew(20deg,5deg) ;
+            transform: rotate(20deg) scale(1.2)  translate(0px,5px) skew(20deg,5deg) ;
+            -moz-transform: rotate(20deg) scale(1.2)  translate(0px,5px) skew(20deg,5deg); 
+             -o-transform: rotate(20deg) scale(1.2)  translate(0px,5px) skew(20deg,5deg) ;
+              -ms-transform:  rotate(20deg) scale(1.2)  translate(0px,5px) skew(20deg,5deg); */
+
+          width:15px;
+          height: 30px;
+        }
+         #yzm1{
+            -webkit-transform: rotate(10deg) scale(1.0) skew(0deg,0deg) translate(0px,-3px) ;
+            transform:  rotate(10deg) scale(1.0) skew(0deg,0deg) translate(0px,-3px) ;
+        }
+        #yzm2{
+            -webkit-transform: rotate(20deg) scale(1.2) skew(20deg,5deg) translate(0px,2px)  ;
+            transform:  rotate(20deg) scale(1.2) skew(20deg,5deg) translate(0px,2px)  ;
+        }
+        #yzm3{
+            -webkit-transform: rotate(10deg) scale(1.0)  translate(0px,3px) ;
+            transform:  rotate(10deg) scale(1.0)  translate(0px,3px);
+        }
+        #yzm4{
+            -webkit-transform: skew(10deg,15deg) scale(1.4)  translate(0) ;
+            transform:  skew(10deg,15deg) scale(1.4)  translate(0);
+        }
+        #yzm5{
+            -webkit-transform: rotate(40deg) scale(1.4)  translate(0px,-4px) ;
+            transform:  rotate(40deg) scale(1.4)  translate(0px,-4px) ;
+        } 
+        
+        
+
+    </style>
+</head>
+<body>
+    <span id="yzm1"></span><span id="yzm2"></span><span id="yzm3"></span><span id="yzm4"></span><span id="yzm5"></span>
+    <input type="text" id="yzmInput"><input type="button" value="看不清换一个" id="btn"><input type="button" value="确定" id="btn1">
+<script>
+   var yzmArr="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"  ;
+   var btn=document.getElementById("btn");
+   var btn1=document.getElementById("btn1");
+   var yzmInput=document.getElementById("yzmInput");
+   var spans=document.getElementsByTagName("span")  
+   var code=[];
+   var arr;
+   function yzmxr(){
+   var i;
+  
+   for(i=0;i<5;i++){
+     var p= Math.ceil(Math.random()*1000%63);
+     spans[i].innerHTML=yzmArr.substr(p,1);
+     code[i]=spans[i].innerHTML;
+     
+   } 
+   console.log(code); 
+   arr=code.join(",");
+}
+   
+   yzmxr();
+   btn.onclick=function(){
+    yzmxr();
+   }
+   btn1.onclick=function(){
+    if(yzmInput.value.toUpperCase()==arr.toUpperCase())
+    {
+       alert("验证成功");
+    }else{
+        alert("验证码错误，请重新输入");
+        yzmInput.value="";
+        yzmInput.focus();
+        yzmxr();
+        code=[];
+    }
+   }
+</script>
+</html>

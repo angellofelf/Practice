@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .groundfather{
+            background-color:blue;
+            border:1px solid red;
+            position: relative;
+        }
+        .father{
+            background-color:aqua;
+            color:black;
+            border: 1px solid blue;
+            margin:10px;
+            padding:10px 5px 10px;
+            width:1000px;
+           
+
+            /* height:200px; */
+        }
+     .son1{
+         background-color:peru;
+         border:1px solid black;
+         /* margin:0px 10px 0px; */
+         padding:10px;
+         position:absolute;
+          top:0px;/*使用百分比的话必须要父元素有确切的高度值 */
+         left:0px;
+         
+     }
+        .son2{
+            background-color:yellow;
+            border:1px solid black;
+        }
+        .son3{
+            background-color:beige;
+            border:1px solid oldlace;
+        }
+        .uncle{
+            background-color:navy;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="groundfather">
+    <div class="father">
+        <div class="son1">son1</div>
+        <div class="son2">son2</div>
+        <div class="son3">son3</div>
+    </div>
+    <div class="uncle">uncle</div>
+</div>
+</body>
+</html>

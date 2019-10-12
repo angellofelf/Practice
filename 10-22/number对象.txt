@@ -1,0 +1,14 @@
+对象属性：
+MAX_VALUE 可表示的最大的数
+MIN_VALUE 可表示的最小的数
+NAN 非数值
+NGEATIVE_INFINITY   负无穷大
+POSITIVE_INFINITY
+
+
+js中其实没有单纯的基本数组类型  只有对象和字面量
+  var x=10；
+  x就是一个nubmer对象
+
+
+ toFixed（n）  精确到第几位
